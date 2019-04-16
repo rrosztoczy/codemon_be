@@ -1,5 +1,5 @@
 class Api::V1::MonsterSerializer < ActiveModel::Serializer
-  attributes :name, :phrase, :questions, :answers
+  attributes :name, :phrase, :questions, :answers, :image
 
   def questions 
     self.object.questions.map do |question|

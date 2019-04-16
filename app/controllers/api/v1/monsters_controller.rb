@@ -21,7 +21,7 @@ end
 private
 
 def monster_params
-  params.require(:monster).permit(:name, :phrase)
+  params.require(:monster).permit(:name, :phrase, :image)
 end
 
 def find_monster
