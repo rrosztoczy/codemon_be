@@ -7,16 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Monsters
-rubia = Monster.create(name: "Rubia", phrase: "I'm a new developers best friend!...", image: "https://imgur.com/QRupg1A")
+rubia = Monster.create(name: "Rubia", phrase: "I'm a new developers best friend!...", image: "https://i.imgur.com/QRupg1A.png")
 noSQL = Monster.create(name: "NoSQL", phrase: "WITH RECURSIVE q(r, i, rx, ix, g) AS (
     SELECT r::DOUBLE PRECISION * 0.02, i::DOUBLE PRECISION * 0.02, 
           .0::DOUBLE PRECISION      , .0::DOUBLE PRECISION, 0
     FROM generate_series(-60, 20) r, generate_series(-50, 50) i
-    UNION ALL...", image: "https://imgur.com/suYotx3")
-elixin = Monster.create(name: "Elixin", phrase: "I'm so fast and strong, catch me if you can!...", image: "https://imgur.com/1eQqkmx")
-piethon = Monster.create(name: "Piethon", phrase: "Let's have pun with data!", image: "https://imgur.com/Extrqk7")
-javahscrypt = Monster.create(name: "Javahscrypt", phrase: "Jaaaaaaaaavvahscrypt", image: "https://imgur.com/6qrQ36c")
-rustico = Monster.create(name: "Rustico", phrase: "?", image: "https://imgur.com/t2m38nW")
+    UNION ALL...)", image: "https://i.imgur.com/suYotx3.png")
+elixin = Monster.create(name: "Elixin", phrase: "I'm so fast and strong, catch me if you can!...", image: "https://i.imgur.com/1eQqkmx.png")
+piethon = Monster.create(name: "Piethon", phrase: "Let's have pun with data!", image: "https://i.imgur.com/Extrqk7.png")
+javahscrypt = Monster.create(name: "Javahscrypt", phrase: "Jaaaaaaaaavvahscrypt", image: "https://i.imgur.com/6qrQ36c.png")
+rustico = Monster.create(name: "Rustico", phrase: "?", image: "https://i.imgur.com/t2m38nW.png")
 
 # Questions
 # Schema for new:
