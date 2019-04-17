@@ -63,7 +63,7 @@ rusticoeasyd = Answer.create(answer_text: "function push(self, T) {if self.len =
 
 
 #noSQL
-noSQLeasy = Question.create(question_text: "With SQL, how do you select all the records from a table named "Persons" where the "LastName" is alphabetically between (and including) "Hansen" and "Pettersen"?", difficulty: 1, monster_id: noSQL.id)
+noSQLeasy = Question.create(question_text: "With SQL, how do you select all the records from a table named "Persons" where the 'LastName' is alphabetically between (and including) 'Hansen' and 'Pettersen'?", difficulty: 1, monster_id: noSQL.id)
 
 noSQLeasya = Answer.create(answer_text: "SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'", letter: "A", correct: true, question_id: noSQLeasy.id)
 
@@ -89,14 +89,14 @@ pythoneasyd = Answer.create(answer_text: "['apple', 'banana', 'cherry']", letter
 
 
 ####Elixir
-elixireasy = Question.create(question_text: ""war".toUpperCase().split("").reverse().join("");
-"Woah i don't speak javascript! Can you translate for me? ", difficulty: 1, monster_id: elixin.id)
+elixireasy = Question.create(question_text: "'war'.toUpperCase().split('').reverse().join('');.....
+Woah i don't speak javascript! Can you translate for me? ", difficulty: 1, monster_id: elixin.id)
 
-elixireasya = Answer.create(answer_text: ""war" |> String.upcase |> String.split("") |> Enum.reverse |> Enum.join("")", letter: "A", correct: true, question_id: elixin.id)
+elixireasya = Answer.create(answer_text: "'war' |> String.upcase |> String.split('') |> Enum.reverse |> Enum.join('')", letter: "A", correct: true, question_id: elixin.id)
 
 
-elixireasyb = Answer.create(answer_text: ""war".upcase.split.reverse.join("")", letter: "B", correct: false, question_id: elixin.id)
+elixireasyb = Answer.create(answer_text: "'war'.upcase.split.reverse.join('')", letter: "B", correct: false, question_id: elixin.id)
 
-elixireasyc = Answer.create(answer_text: ""war".toUpperCase().split("").reverse().join("");", letter: "C", correct: false, question_id: elixin.id)
+elixireasyc = Answer.create(answer_text: "'war'.toUpperCase().split('').reverse().join('');", letter: "C", correct: false, question_id: elixin.id)
 
-elixireasyd = Answer.create(answer_text: ""war".toUpperCase.split.reverse.join;", letter: "D", correct: false, question_id: elixin.id)
+elixireasyd = Answer.create(answer_text: "'war'.toUpperCase.split.reverse.join;", letter: "D", correct: false, question_id: elixin.id)
