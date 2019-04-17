@@ -27,7 +27,9 @@ rustico = Monster.create(name: "Rustico", phrase: "?", image: "https://i.imgur.c
 # t.datetime "updated_at", null: false
 # t.index ["monster_id"], name: "index_questions_on_monster_id"
 # Rubia
-rubyeasy = Question.create(question_text: "Which of these methods is mine?", difficulty: 1, monster_id: rubia.id)
+rubyeasy = Question.create(question_text: "Can you dodge my array of fireballs? fireballArray = ['fireball', 'fireball','fireball']", difficulty: 1, monster_id: rubia.id)
+jseasy = Question.create(question_text: "I'm an dom element! How do you select me by id?", difficulty: 1, monster_id: javahscrypt.id)
+rusticoeasy = Question.create(question_text: "Find my recursive macro! Muahahaha.", difficulty: 1, monster_id: rustico.id)
 # rubymediun = Question.create(question_text: "How", difficulty: 1, monster_id: 1)
 # rubyhard = Question.create(question_text: "How", difficulty: 1, monster_id: 1)
 
@@ -41,10 +43,22 @@ rubyeasy = Question.create(question_text: "Which of these methods is mine?", dif
 # t.datetime "created_at", null: false
 # t.datetime "updated_at", null: false
 # t.index ["question_id"], name: "index_answers_on_question_id"
-rubyeasya = Answer.create(answer_text: "Array.prototype.forEach()", letter: "A", correct: false, question_id: rubyeasy.id)
-rubyeasyb = Answer.create(answer_text: "Array.prototype.forEach()", letter: "B", correct: false, question_id: rubyeasy.id)
-rubyeasyc = Answer.create(answer_text: "Fireballs.each { |Fireball| puts `Spits fireball` }", letter: "C", correct: true, question_id: rubyeasy.id)
-rubyeasyd = Answer.create(answer_text: "Array.prototype.forEach()", letter: "D", correct: false, question_id: rubyeasy.id)
+rubyeasya = Answer.create(answer_text: "fireballArray.map()", letter: "A", correct: false, question_id: rubyeasy.id)
+rubyeasyb = Answer.create(answer_text: "fireballArray.each do |fireball| def dodgeFireball(fireball) end end", letter: "B", correct: false, question_id: rubyeasy.id)
+rubyeasyc = Answer.create(answer_text: "fireballArray.each { |fireball| dodgeFireball(fireball) }", letter: "C", correct: true, question_id: rubyeasy.id)
+rubyeasyd = Answer.create(answer_text: "fireballArray.forEach()", letter: "D", correct: false, question_id: rubyeasy.id)
+jseasya = Answer.create(answer_text: "let caughtJavahscrypt = document.getElementByName('javahscrypt');", letter: "A", correct: false, question_id: jseasy.id)
+jseasyb = Answer.create(answer_text: "let caughtJavahscrypt = document.getElementById('#javahscrypt');", letter: "B", correct: false, question_id: jseasy.id)
+jseasyc = Answer.create(answer_text: "let caughtJavahscrypt = document.querySelector('.javahscrypt');", letter: "C", correct: false, question_id: jseasy.id)
+jseasyd = Answer.create(answer_text: "let caughtJavahscrypt = document.querySelector('#javahscrypt');", letter: "D", correct: true, question_id: jseasy.id)
+rusticoeasya = Answer.create(answer_text: "macro_rules! sum {($base:expr) => { $base }; ($a:expr, $($rest:expr),+) => { $a + sum!($($rest),+) };}", letter: "A", correct: true, question_id: rusticoeasy.id)
+rusticoeasyb = Answer.create(answer_text: "recursive_function sum {($base) => { $base };(expr, $(expr),+) => { $a + sum!($($rest),+) };}", letter: "B", correct: false, question_id: rusticoeasy.id)
+rusticoeasyc = Answer.create(answer_text: "pub fn push(&mut self, value: T) {if self.len == self.buf.cap() {self.buf.double();}", letter: "C", correct: false, question_id: rusticoeasy.id)
+rusticoeasyd = Answer.create(answer_text: "function push(self, T) {if self.len == self.buf.cap() {self(push(self))}", letter: "D", correct: false, question_id: rusticoeasy.id)
+
+
+
+
 
 
 
