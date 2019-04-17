@@ -9,7 +9,7 @@
 # Monsters
 rubia = Monster.create(name: "Rubia", phrase: "I'm a new developers best friend!...", image: "https://i.imgur.com/QRupg1A.png")
 noSQL = Monster.create(name: "NoSQL", phrase: "WITH RECURSIVE q(r, i, rx, ix, g) AS (
-    SELECT r::DOUBLE PRECISION * 0.02, i::DOUBLE PRECISION * 0.02, 
+    SELECT r::DOUBLE PRECISION * 0.02, i::DOUBLE PRECISION * 0.02,
           .0::DOUBLE PRECISION      , .0::DOUBLE PRECISION, 0
     FROM generate_series(-60, 20) r, generate_series(-50, 50) i
     UNION ALL...)", image: "https://i.imgur.com/suYotx3.png")
@@ -48,9 +48,41 @@ rubyeasyd = Answer.create(answer_text: "Array.prototype.forEach()", letter: "D",
 
 
 
+#noSQL
+noSQLeasy = Question.create(question_text: "With SQL, how do you select all the records from a table named "Persons" where the "LastName" is alphabetically between (and including) "Hansen" and "Pettersen"?", difficulty: 1, monster_id: noSQL.id)
+
+noSQLeasya = Answer.create(answer_text: "SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'", letter: "A", correct: true, question_id: noSQLeasy.id)
+
+noSQLeasyb = Answer.create(answer_text: "SELECT * FROM Persons WHERE LastName>'Hansen' AND LastName<'Pettersen'", letter: "B", correct: false, question_id: noSQLeasy.id)
+
+noSQLeasyc = Answer.create(answer_text: "SELECT * LastName>'Hansen' AND LastName<'Pettersen' FROM Persons", letter: "C", correct: false, question_id: noSQLeasy.id)
+
+noSQLeasyd = Answer.create(answer_text: "I Don't Know but I'd choose me!", letter: "D", correct: false, question_id: noSQLeasy.id)
 
 
 
+#######Python
+pythoneasy = Question.create(question_text: "Woah! What's a TUPLE?", difficulty: 1, monster_id: piethon.id)
+
+pythoneasya = Answer.create(answer_text: "{'name':'apple', 'color':green}", letter: "A", correct: false, question_id: pythoneasy.id)
+
+pythoneasyb = Answer.create(answer_text: "('apple', 'banana', 'cherry')", letter: "B", correct: true, question_id: pythoneasy.id)
+
+pythoneasyc = Answer.create(answer_text: "{'apple', 'banana', 'cherry'}", letter: "C", correct: false, question_id: pythoneasy.id)
+
+pythoneasyd = Answer.create(answer_text: "['apple', 'banana', 'cherry']", letter: "D", correct: true, question_id: pythoneasy.id)
 
 
 
+####Elixir
+elixireasy = Question.create(question_text: ""war".toUpperCase().split("").reverse().join("");
+"Woah i don't speak javascript! Can you translate for me? ", difficulty: 1, monster_id: elixin.id)
+
+elixireasya = Answer.create(answer_text: ""war" |> String.upcase |> String.split("") |> Enum.reverse |> Enum.join("")", letter: "A", correct: true, question_id: elixin.id)
+
+
+elixireasyb = Answer.create(answer_text: ""war".upcase.split.reverse.join("")", letter: "B", correct: false, question_id: elixin.id)
+
+elixireasyc = Answer.create(answer_text: ""war".toUpperCase().split("").reverse().join("");", letter: "C", correct: false, question_id: elixin.id)
+
+elixireasyd = Answer.create(answer_text: ""war".toUpperCase.split.reverse.join;", letter: "D", correct: false, question_id: elixin.id)
